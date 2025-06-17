@@ -3,90 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Tabela</title>
+    <title>Exercício de Tabela</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
         table {
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
         }
-        td, th {
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
             padding: 8px;
+        }
+        th, td {
             border: 1px solid black;
+            padding: 8px;
         }
-        .cabecalho {
-            background-color: gray;
-            color: white;
+        tr.destaque {
+            background-color: chartreuse;
         }
-        th.media {
-            text-align: left;
+        col.cnome {
+            background-color: chartreuse;
+        }
+        .amarelo {
+            background-color: yellow;
+        }
+        .vermelho {
+            background-color: red;
         }
     </style>
 </head>
 <body>
+    <h1>Exercício de Tabela</h1>
+
     <table>
-        <thead>
-            <tr>
-                <th rowspan="2" scope="col" class="cabecalho">Área</th>
-                <th rowspan="2" scope="col" class="cabecalho">Disciplinas</th>
-                <th colspan="2" scope="colgroup" class="cabecalho">Notas</th>
-                <th rowspan="2" scope="col" class="cabecalho">Média</th>
-            </tr>
-            <tr>
-                <th class="cabecalho" scope="col">Nota 1</th>
-                <th class="cabecalho" scope="col">Nota 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="4" scope="rowgroup">Exatas</th>
-                <td>Matemática</td>
-                <td>5.0</td>
-                <td>6.5</td>
-                <td>5.75</td>
-            </tr>
-            <tr>
-                <td>Física</td>
-                <td>4.0</td>
-                <td>5.5</td>
-                <td>4.75</td>
-            </tr>
-            <tr>
-                <td>Química</td>
-                <td>7.0</td>
-                <td>6.5</td>
-                <td>6.75</td>
-            </tr>
-            <tr>
-                <td>Biologia</td>
-                <td>6.0</td>
-                <td>8.0</td>
-                <td>7.0</td>
-            </tr>
-            <tr>
-                <th colspan="4" scope="row" class="media cabecalho">Média de Exatas</th>
-                <td class="cabecalho"><strong>6.0</strong></td>
-            </tr>
-            <tr>
-                <th rowspan="2" scope="rowgroup">Humanas</th>
-                <td>História</td>
-                <td>8.0</td>
-                <td>9.0</td>
-                <td>8.5</td>
-            </tr>
-            <tr>
-                <td>Geografia</td>
-                <td>6.0</td>
-                <td>5.5</td>
-                <td>5.75</td>
-            </tr>
-            <tr>
-                <th colspan="4" scope="row" class="media cabecalho">Média de Humanas</th>
-                <td class="cabecalho"><strong>7.1</strong></td>
-            </tr>
-        </tbody>
+        <colgroup>
+            <col class="amarelo">
+            <col class="vermelho" span="2">
+            <col class="amarelo">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionista</td>
+        </tr>
     </table>
+    
 </body>
 </html>
